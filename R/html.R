@@ -279,7 +279,7 @@ split_chapters = function(
   # Need to take care of the div tags here before restore_part_html and
   # restore_appendix_html erase the section ids of the hidden PART or APPENDIX
   # sections.
-  if (split_level > 1) {
+  if (FALSE) {
     body = x[(i5 + 1):(i6 - 1)]
     h1 = grep('^<div (id="[^"]+" )?class="section level1("| )', body) + i5
     h2 = grep('^<div (id="[^"]+" )?class="section level2("| )', body) + i5
