@@ -56,8 +56,7 @@ jobs:
     steps:
       - uses: addnab/docker-run-action@v3
         with:
-          registry: gcr.io/validator
-          image: validator:latest
+          image: gcr.io/validator/validator:latest
           options: -p 8888:8888 -d
 
       - uses: actions/checkout@v4
