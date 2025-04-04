@@ -54,10 +54,10 @@ jobs:
       actions: read
 
     steps:
-      - uses: addnab/docker-run-action@v3
-        with:
-          image: gcr.io/validator/validator:latest
-          options: -p 8888:8888 -d
+      - name: start HTML validation server
+        run: |
+          docker run --rm -p 8888:8888 -d ghcr.io/validator/validator:latest
+        shell: bash
 
       - uses: actions/checkout@v4
 
